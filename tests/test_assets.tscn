@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5siokib7aj5a"]
+
+[ext_resource type="Texture2D" uid="uid://brgu55o5uxxhq" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="1_kdhnr"]
+[ext_resource type="Texture2D" uid="uid://6u4ymscw1r1q" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Elevation.png" id="2_ykyrf"]
+[ext_resource type="Texture2D" uid="uid://rnwxikx51fdh" path="res://addons/Tiny Swords/Terrain/Bridge/Bridge_All.png" id="3_wnydm"]
+[ext_resource type="Texture2D" uid="uid://ckfl0ckoqjd03" path="res://addons/Tiny Swords/Terrain/Water/Foam/Foam.png" id="4_nelxi"]
+[ext_resource type="Texture2D" uid="uid://bdsmn62cwx7t5" path="res://addons/Tiny Swords/Terrain/Water/Rocks/Rocks_04.png" id="5_b6tny"]
+[ext_resource type="Texture2D" uid="uid://d2fp36jbp4gyu" path="res://addons/Tiny Swords/Terrain/Water/Water.png" id="6_o300h"]
+[ext_resource type="Texture2D" uid="uid://bthkdq73cxejp" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="7_c2tid"]
+[ext_resource type="PackedScene" uid="uid://c6qk4oqvkv6sp" path="res://misc/aura.tscn" id="8_t3lns"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-1494, 24)
+
+[node name="TilemapFlat" type="Sprite2D" parent="."]
+position = Vector2(310, 162)
+texture = ExtResource("1_kdhnr")
+
+[node name="TilemapElevation" type="Sprite2D" parent="."]
+position = Vector2(134, 589)
+texture = ExtResource("2_ykyrf")
+
+[node name="BridgeAll" type="Sprite2D" parent="."]
+position = Vector2(816, -1)
+texture = ExtResource("3_wnydm")
+
+[node name="Foam" type="Sprite2D" parent="."]
+position = Vector2(506, -177)
+texture = ExtResource("4_nelxi")
+
+[node name="Rocks04" type="Sprite2D" parent="."]
+position = Vector2(814, 414)
+texture = ExtResource("5_b6tny")
+
+[node name="Water" type="Sprite2D" parent="."]
+position = Vector2(1062, -26)
+texture = ExtResource("6_o300h")
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(2080, 698)
+texture = ExtResource("7_c2tid")
+
+[node name="Aura" parent="." instance=ExtResource("8_t3lns")]

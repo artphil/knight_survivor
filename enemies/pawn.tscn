@@ -1,0 +1,79 @@
+[gd_scene load_steps=13 format=3 uid="uid://b8psdp3fbcrqe"]
+
+[ext_resource type="Texture2D" uid="uid://c4rbhxg1lm3q1" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="1_bblmc"]
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_jexql"]
+[ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="2_1lhn7"]
+[ext_resource type="PackedScene" uid="uid://c54vemraksi4v" path="res://misc/skull.tscn" id="2_4wy4a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxfm3"]
+atlas = ExtResource("1_bblmc")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c0qk"]
+atlas = ExtResource("1_bblmc")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rr3v"]
+atlas = ExtResource("1_bblmc")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0iuco"]
+atlas = ExtResource("1_bblmc")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsy8b"]
+atlas = ExtResource("1_bblmc")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc3do"]
+atlas = ExtResource("1_bblmc")
+region = Rect2(960, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lgiij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxfm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c0qk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rr3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iuco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsy8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc3do")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfxwr"]
+radius = 16.0
+height = 50.0
+
+[node name="Pawn" type="CharacterBody2D" groups=["enemy"]]
+motion_mode = 1
+script = ExtResource("1_jexql")
+attack_damage = 2.0
+death_prefab = ExtResource("2_4wy4a")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -20)
+sprite_frames = SubResource("SpriteFrames_lgiij")
+autoplay = "default"
+frame_progress = 0.620535
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
+shape = SubResource("CapsuleShape2D_lfxwr")
+
+[node name="FolowPlayer" type="Node" parent="."]
+script = ExtResource("2_1lhn7")
