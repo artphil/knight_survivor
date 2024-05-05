@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cyur00vudnqgy"]
+[gd_scene load_steps=16 format=3 uid="uid://cyur00vudnqgy"]
 
 [ext_resource type="Texture2D" uid="uid://bthkdq73cxejp" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_xr0as"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_ypwwh"]
@@ -133,6 +133,12 @@ radius = 136.004
 [sub_resource type="CircleShape2D" id="CircleShape2D_sftt7"]
 radius = 61.131
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02qux"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 0.505882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ton2"]
+bg_color = Color(0.588235, 0.0980392, 0.156863, 1)
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_ypwwh")
@@ -170,3 +176,13 @@ debug_color = Color(0.909804, 0, 0.247059, 0)
 position = Vector2(0, -25)
 shape = SubResource("CircleShape2D_sftt7")
 debug_color = Color(0.980392, 0.0745098, 0.443137, 0.231373)
+
+[node name="HealthProgress" type="ProgressBar" parent="."]
+offset_left = -53.0
+offset_top = 17.0
+offset_right = 53.0
+offset_bottom = 33.0
+theme_override_styles/background = SubResource("StyleBoxFlat_02qux")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1ton2")
+value = 40.13
+show_percentage = false

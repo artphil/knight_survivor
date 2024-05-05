@@ -19,6 +19,7 @@ extends CharacterBody2D
 @onready var animation: AnimationPlayer = $AnimationPlayer
 @onready var sword_area: Area2D = $SwordArea
 @onready var hitbox_area: Area2D = $HitboxArea
+@onready var health_progress: ProgressBar = $HealthProgress
 
 
 var input_vector: Vector2 = Vector2()
@@ -42,10 +43,13 @@ func _process(delta) -> void:
 
 	if Input.is_action_just_pressed("attack"):
 		attack()
-		
+
 	hit_detect(delta)
-	
+
 	aura()
+
+	health_progress.max_value = max_health
+	health_progress.value = health
 
 
 func _physics_process(_delta: float) -> void:
@@ -91,7 +95,7 @@ func process_countdown(delta: float) -> void:
 			is_attacking = false
 			is_running = false
 			animation.play("idle")
-	
+
 	aura_cooldown -= delta
 
 
@@ -155,16 +159,16 @@ func die() -> void:
 
 	queue_free()
 
-func heal(amount:float):
+func heal(amount: float):
 	health += amount
-	health = min(health,max_health)
+	health = min(health, max_health)
 	print("Player health: %d / %d" % [health, max_health])
-	
+
 func aura():
 	if aura_cooldown > 0: return
-	
+
 	aura_cooldown = aura_interval
-	
+
 	var aura_scene = aura_prefab.instantiate()
 	aura_scene.damage_amount = aura_damage
 	add_child(aura_scene)
