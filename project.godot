@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Tiny Swords"
+config/name="Knight Survivor"
+config/description="An action and survival game"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://addons/Tiny Swords/Deco/16.png"
 
 [autoload]
 
