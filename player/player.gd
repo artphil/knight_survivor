@@ -1,26 +1,24 @@
 class_name Player
 extends CharacterBody2D
 
+signal item_collected(item_name: String)
+
 @export_category('Movement')
 @export var speed: float = 3
+
 @export_category('Sword')
 @export var sword_attack: int = 2
+
 @export_category('Aura')
 @export var aura_damage: int = 2
 @export var aura_interval: float = 30
 @export var aura_prefab: PackedScene
+
 @export_category('Life')
 @export var health: int = 100
 @export var max_health: int = 100
 @export var hit_frequency: float = 0.5
 @export var death_prefab: PackedScene
-
-@onready var sprite: Sprite2D = $Sprite2D
-@onready var animation: AnimationPlayer = $AnimationPlayer
-@onready var sword_area: Area2D = $SwordArea
-@onready var hitbox_area: Area2D = $HitboxArea
-@onready var health_progress: ProgressBar = $HealthProgress
-
 
 var input_vector: Vector2 = Vector2()
 var attack_cooldown: float = 0
@@ -30,6 +28,15 @@ var is_attacking: bool = false
 var is_running: bool = false
 var was_running: bool = false
 
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var animation: AnimationPlayer = $AnimationPlayer
+@onready var sword_area: Area2D = $SwordArea
+@onready var hitbox_area: Area2D = $HitboxArea
+@onready var health_progress: ProgressBar = $HealthProgress
+
+
+func _ready() -> void:
+	GameManager.player = self
 
 func _process(delta) -> void:
 	GameManager.player_position = position
@@ -51,7 +58,6 @@ func _process(delta) -> void:
 	health_progress.max_value = max_health
 	health_progress.value = health
 
-
 func _physics_process(_delta: float) -> void:
 	process_input()
 	move_and_slide()
@@ -68,7 +74,6 @@ func process_input() -> void:
 	if is_attacking:
 		target_velocity *= 0.25
 	velocity = lerp(velocity, target_velocity, 0.2)
-
 
 func process_animation() -> void:
 	was_running = is_running
@@ -87,7 +92,6 @@ func process_direction():
 	elif input_vector.x < 0:
 		sprite.flip_h = true
 
-
 func process_countdown(delta: float) -> void:
 	if is_attacking:
 		attack_cooldown -= delta
@@ -98,7 +102,6 @@ func process_countdown(delta: float) -> void:
 
 	aura_cooldown -= delta
 
-
 func attack() -> void:
 	if is_attacking:
 		return
@@ -107,7 +110,6 @@ func attack() -> void:
 
 	is_attacking = true
 	attack_cooldown = 0.6
-
 
 func apply_damage_to_enemies() -> void:
 	var enemies = sword_area.get_overlapping_bodies()
@@ -137,7 +139,6 @@ func hit_detect(delta: float) -> void:
 
 			damage(enemy.attack_damage)
 
-
 func damage(amount: int) -> void:
 	health -= amount
 
@@ -158,7 +159,7 @@ func die() -> void:
 
 	queue_free()
 
-func heal(amount: float):
+func heal(amount: int):
 	health += amount
 	health = min(health, max_health)
 	print("Player health: %d / %d" % [health, max_health])
