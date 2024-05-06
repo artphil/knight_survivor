@@ -3,7 +3,7 @@ class_name Util
 static func get_time(time_float: float) -> String:
   var time_int: int = floori(time_float)
   var seconds: int = time_int % 60
-  var minutes: int = time_int / 60
+  var minutes: int = int(time_int / 60.0)
 
   return "%02d:%02d" % [minutes, seconds]
 
