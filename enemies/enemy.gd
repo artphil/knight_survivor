@@ -1,11 +1,19 @@
 class_name Enemy
 extends Node2D
 
+
 const damage_digit_prefab: PackedScene = preload('res://misc/damage_digit.tscn')
 
+@export_category('Life')
 @export var health: int = 10
 @export var attack_damage: int = 1
 @export var death_prefab: PackedScene
+
+@export_category('Drops')
+@export var drop_chance: float = 0.1
+@export var items_prefab: Array[PackedScene]
+@export var items_chance: Array[float]
+
 
 @onready var damage_marker: Marker2D = $Marker
 
@@ -36,5 +44,26 @@ func die() -> void:
 		death_scene.position = position
 		get_parent().add_child(death_scene)
 
+		drop_item()
+
 	queue_free()
+
+func drop_item():
+	if items_prefab.is_empty(): return
+	if randf() > drop_chance: return
+
+	var item_scene: Node2D = get_drop()
+	item_scene.position = position
+	get_parent().add_child(item_scene)
+
+func get_drop():
+	if items_prefab.size() == 1:
+		return items_prefab[0].instantiate()
+
+	var weigths: Array[float] = []
+	for i in items_prefab.size():
+		var item_weigth = items_chance[i] if i < items_chance.size() else 1.0
+		weigths.push_back(item_weigth)
+	var index = Util.weight_rand(weigths)
+	return items_prefab[index].instantiate()
 
