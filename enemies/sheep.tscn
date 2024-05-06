@@ -62,7 +62,7 @@ height = 38.0
 [node name="Sheep" type="CharacterBody2D" groups=["enemy"]]
 motion_mode = 1
 script = ExtResource("1_yx6o6")
-health = 1.0
+health = 1
 death_prefab = ExtResource("2_7oejm")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]

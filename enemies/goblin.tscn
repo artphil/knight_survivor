@@ -63,8 +63,8 @@ height = 62.0
 scale = Vector2(2, 2)
 motion_mode = 1
 script = ExtResource("1_38ll3")
-health = 15.0
-attack_damage = 10.0
+health = 15
+attack_damage = 3
 death_prefab = ExtResource("2_3xe6j")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
@@ -80,3 +80,6 @@ shape = SubResource("CapsuleShape2D_lfxwr")
 [node name="FolowPlayer" type="Node" parent="."]
 script = ExtResource("4_eb656")
 speed = 0.5
+
+[node name="Marker" type="Marker2D" parent="."]
+position = Vector2(0, -53.5)

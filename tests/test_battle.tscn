@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://db2v28peeaj4w"]
+[gd_scene load_steps=6 format=3 uid="uid://db2v28peeaj4w"]
 
 [ext_resource type="PackedScene" uid="uid://c3heepplkfrc4" path="res://enemies/sheep.tscn" id="1_2en5x"]
 [ext_resource type="PackedScene" uid="uid://cyur00vudnqgy" path="res://player/player.tscn" id="2_jbdii"]
 [ext_resource type="PackedScene" uid="uid://dwsmvfqe88wfs" path="res://enemies/goblin.tscn" id="3_nff1o"]
 [ext_resource type="PackedScene" uid="uid://b8psdp3fbcrqe" path="res://enemies/pawn.tscn" id="4_dy3pc"]
+[ext_resource type="PackedScene" uid="uid://chewiwj5txits" path="res://misc/damage_digit.tscn" id="5_h1f0e"]
 
 [node name="test_batle" type="Node2D"]
 
@@ -33,3 +34,6 @@ position = Vector2(604, -127)
 
 [node name="Sheep3" parent="." instance=ExtResource("1_2en5x")]
 position = Vector2(1227, -91)
+
+[node name="damage_digit" parent="." instance=ExtResource("5_h1f0e")]
+position = Vector2(279, 375)

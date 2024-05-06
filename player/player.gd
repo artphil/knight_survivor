@@ -138,9 +138,8 @@ func hit_detect(delta: float) -> void:
 			damage(enemy.attack_damage)
 
 
-func damage(amount: float) -> void:
+func damage(amount: int) -> void:
 	health -= amount
-	print("Player health: %d / %d", [health, max_health])
 
 	modulate = Color.RED
 	var tween = create_tween()
