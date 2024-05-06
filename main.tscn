@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://csxnfanavhv78"]
+[gd_scene load_steps=12 format=3 uid="uid://csxnfanavhv78"]
 
 [ext_resource type="PackedScene" uid="uid://cyur00vudnqgy" path="res://player/player.tscn" id="1_eikka"]
+[ext_resource type="Script" path="res://main.gd" id="1_fsdpd"]
 [ext_resource type="PackedScene" uid="uid://cvrisvbi4sm1c" path="res://ui/game_ui.tscn" id="2_3hbd7"]
+[ext_resource type="PackedScene" uid="uid://c522nfb88wobo" path="res://ui/game_over_ui.tscn" id="2_ilrs6"]
 [ext_resource type="PackedScene" uid="uid://h7ifi3hqgvmo" path="res://systems/mob_spawn.tscn" id="3_tocwh"]
 [ext_resource type="Texture2D" uid="uid://brgu55o5uxxhq" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="4_xjmxu"]
 [ext_resource type="Texture2D" uid="uid://d2fp36jbp4gyu" path="res://addons/Tiny Swords/Terrain/Water/Water.png" id="5_0k48n"]
+[ext_resource type="PackedScene" uid="uid://bu43dfg2vm2pp" path="res://systems/diffuculty_system.tscn" id="5_rtx5e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k588b"]
 texture = ExtResource("4_xjmxu")
@@ -198,8 +201,11 @@ terrain_set_1/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/2 = SubResource("TileSetAtlasSource_k588b")
 sources/3 = SubResource("TileSetAtlasSource_m2v76")
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" node_paths=PackedStringArray("game_ui")]
 y_sort_enabled = true
+script = ExtResource("1_fsdpd")
+game_ui = NodePath("GameUI")
+game_over_ui_prefab = ExtResource("2_ilrs6")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4guju")
@@ -230,6 +236,9 @@ update_rotation = false
 update_scale = false
 
 [node name="GameUI" parent="." instance=ExtResource("2_3hbd7")]
+
+[node name="DiffucultySystem" parent="." node_paths=PackedStringArray("mob_spawn") instance=ExtResource("5_rtx5e")]
+mob_spawn = NodePath("../MobSpawn")
 
 [node name="MobSpawn" parent="." instance=ExtResource("3_tocwh")]
 position = Vector2(577, 323)

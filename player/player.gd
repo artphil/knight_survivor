@@ -1,7 +1,6 @@
 class_name Player
 extends CharacterBody2D
 
-signal item_collected(item_name: String)
 
 @export_category('Movement')
 @export var speed: float = 3
@@ -152,6 +151,8 @@ func damage(amount: int) -> void:
 		die()
 
 func die() -> void:
+	GameManager.end_game()
+
 	if death_prefab:
 		var death_scene: Node2D = death_prefab.instantiate()
 		death_scene.position = position
@@ -162,7 +163,6 @@ func die() -> void:
 func heal(amount: int):
 	health += amount
 	health = min(health, max_health)
-	print("Player health: %d / %d" % [health, max_health])
 
 func aura():
 	if aura_cooldown > 0: return

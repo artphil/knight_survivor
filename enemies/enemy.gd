@@ -39,6 +39,8 @@ func damage(amount: int) -> void:
 		die()
 
 func die() -> void:
+	GameManager.monsters_defeated += 1
+
 	if death_prefab:
 		var death_scene: Node2D = death_prefab.instantiate()
 		death_scene.position = position
