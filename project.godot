@@ -20,6 +20,10 @@ config/icon="res://addons/Tiny Swords/Deco/16.png"
 
 GameManager="*res://game_manager.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 move_up={

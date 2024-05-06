@@ -20,4 +20,5 @@ func _process(delta):
     restart_game()
 
 func restart_game():
-  pass
+  GameManager.reset()
+  get_tree().reload_current_scene()

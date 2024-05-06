@@ -34,4 +34,5 @@ func reset() -> void:
   monsters_defeated = 0
 
   for commection in game_over.get_connections():
-    game_over.disconnect(commection.Callable)
+    game_over.disconnect(commection.callable)
+
