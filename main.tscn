@@ -239,6 +239,9 @@ update_scale = false
 
 [node name="DiffucultySystem" parent="." node_paths=PackedStringArray("mob_spawn") instance=ExtResource("5_rtx5e")]
 mob_spawn = NodePath("../MobSpawn")
+spawn_rate_base = 40.0
+spawn_rate_per_minute = 20.0
+break_intensity = 0.1
 
 [node name="MobSpawn" parent="." instance=ExtResource("3_tocwh")]
 position = Vector2(577, 323)

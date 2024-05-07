@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bthkdq73cxejp" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_xr0as"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_ypwwh"]
 [ext_resource type="PackedScene" uid="uid://c6qk4oqvkv6sp" path="res://misc/aura.tscn" id="2_1j7wy"]
-[ext_resource type="PackedScene" uid="uid://c54vemraksi4v" path="res://misc/skull.tscn" id="2_jjgwr"]
+[ext_resource type="PackedScene" uid="uid://dny3nmash2gc4" path="res://misc/skull_toten.tscn" id="3_pcefv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40eji"]
 radius = 19.0263
@@ -143,7 +143,7 @@ motion_mode = 1
 script = ExtResource("1_ypwwh")
 aura_interval = 10.0
 aura_prefab = ExtResource("2_1j7wy")
-death_prefab = ExtResource("2_jjgwr")
+death_prefab = ExtResource("3_pcefv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -27)

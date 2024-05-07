@@ -22,6 +22,7 @@ func end_game() -> void:
   if is_game_over: return
   is_game_over = true
   game_over.emit()
+  player_position *= -100
 
 func reset() -> void:
   player_position = Vector2.ZERO
