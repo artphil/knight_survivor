@@ -6,6 +6,7 @@ const damage_digit_prefab: PackedScene = preload('res://misc/damage_digit.tscn')
 
 @export_category('Life')
 @export var health: int = 10
+@export var life_time: float = 30
 @export var attack_damage: int = 1
 @export var death_prefab: PackedScene
 
@@ -13,9 +14,16 @@ const damage_digit_prefab: PackedScene = preload('res://misc/damage_digit.tscn')
 @export var drop_chance: float = 0.1
 @export var items_prefab: Array[PackedScene]
 @export var items_chance: Array[float]
+@export var energy: int = 1
 
 
 @onready var damage_marker: Marker2D = $Marker
+@onready var notifier: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
+
+func _process(delta):
+	life_time -= delta
+	if life_time < 0 and !notifier.is_on_screen():
+		queue_free()
 
 
 func damage(amount: int) -> void:
@@ -68,4 +76,3 @@ func get_drop():
 		weigths.push_back(item_weigth)
 	var index = Util.weight_rand(weigths)
 	return items_prefab[index].instantiate()
-

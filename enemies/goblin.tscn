@@ -86,3 +86,7 @@ speed = 0.5
 
 [node name="Marker" type="Marker2D" parent="."]
 position = Vector2(0, -53.5)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0.249996, -25.75)
+scale = Vector2(6.775, 3.575)
