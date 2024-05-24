@@ -9,8 +9,10 @@ extends CharacterBody2D
 @export var sword_attack: int = 2
 
 @export_category('Aura')
+@export var energy: int = 0
+@export var max_energy: int = 30
+@export var energy_by_atack: int = 1
 @export var aura_damage: int = 2
-@export var aura_interval: float = 30
 @export var aura_prefab: PackedScene
 
 @export_category('Life')
@@ -21,7 +23,6 @@ extends CharacterBody2D
 
 var input_vector: Vector2 = Vector2()
 var attack_cooldown: float = 0
-var aura_cooldown: float = 0
 var hit_cooldown: float = 0
 var is_attacking: bool = false
 var is_running: bool = false
@@ -32,6 +33,7 @@ var was_running: bool = false
 @onready var sword_area: Area2D = $SwordArea
 @onready var hitbox_area: Area2D = $HitboxArea
 @onready var health_progress: ProgressBar = $HealthProgress
+@onready var energy_progress: ProgressBar = $EnergyProgress
 
 
 func _ready() -> void:
@@ -99,8 +101,6 @@ func process_countdown(delta: float) -> void:
 			is_running = false
 			animation.play("idle")
 
-	aura_cooldown -= delta
-
 func attack() -> void:
 	if is_attacking:
 		return
@@ -114,6 +114,7 @@ func apply_damage_to_enemies() -> void:
 	var enemies = sword_area.get_overlapping_bodies()
 	for body in enemies:
 		if body.is_in_group('enemy'):
+			energy += energy_by_atack
 			var enemy: Enemy = body
 			var direction_to_enemy = (enemy.position - position).normalized()
 			var attack_direction: Vector2
@@ -135,8 +136,9 @@ func hit_detect(delta: float) -> void:
 	for body in enemies:
 		if body.is_in_group('enemy'):
 			var enemy: Enemy = body
-
-			damage(enemy.attack_damage)
+			var damage_value = enemy.attack_damage
+			energy += damage_value
+			damage(damage_value)
 
 func damage(amount: int) -> void:
 	health -= amount
@@ -165,9 +167,11 @@ func heal(amount: int):
 	health = min(health, max_health)
 
 func aura():
-	if aura_cooldown > 0: return
+	energy_progress.value = energy
+	energy_progress.max_value = max_energy
 
-	aura_cooldown = aura_interval
+	if energy < max_energy: return
+	energy = 0
 
 	var aura_scene = aura_prefab.instantiate()
 	aura_scene.damage_amount = aura_damage
