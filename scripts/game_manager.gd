@@ -10,7 +10,11 @@ var time_elapse_string: String
 var meat_counter: int = 0
 var gold_counter: int = 0
 var monsters_defeated: int = 0
-
+var total_defeated = {
+  'goblin': 0,
+  'pawn': 0,
+  'sheep': 0
+}
 
 func _process(delta):
   if is_game_over: return

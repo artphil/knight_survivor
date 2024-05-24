@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://systems/difficulty_system.gd" id="1_065ac"]
 
-[node name="DiffucultySystem" type="Node2D" node_paths=PackedStringArray("mob_spawn")]
+[node name="DiffucultySystem" type="Node2D"]
 position = Vector2(577, 323)
 script = ExtResource("1_065ac")
-mob_spawn = NodePath("")
