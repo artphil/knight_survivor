@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://enemies/enemy.gd" id="1_jexql"]
 [ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="2_1lhn7"]
 [ext_resource type="PackedScene" uid="uid://c54vemraksi4v" path="res://misc/skull.tscn" id="2_4wy4a"]
-[ext_resource type="PackedScene" uid="uid://dby0wr46tiqxd" path="res://misc/meat.tscn" id="3_5iboi"]
+[ext_resource type="PackedScene" uid="uid://dby0wr46tiqxd" path="res://misc/gold.tscn" id="3_q2r35"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxfm3"]
 atlas = ExtResource("1_bblmc")
@@ -64,7 +64,7 @@ motion_mode = 1
 script = ExtResource("1_jexql")
 attack_damage = 2
 death_prefab = ExtResource("2_4wy4a")
-items_prefab = Array[PackedScene]([ExtResource("3_5iboi")])
+items_prefab = Array[PackedScene]([ExtResource("3_q2r35")])
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -20)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://csxnfanavhv78"]
+[gd_scene load_steps=13 format=3 uid="uid://csxnfanavhv78"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_cqiaw"]
 [ext_resource type="PackedScene" uid="uid://c522nfb88wobo" path="res://ui/game_over_ui.tscn" id="2_43lwy"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cvrisvbi4sm1c" path="res://ui/game_ui.tscn" id="6_mg3i6"]
 [ext_resource type="PackedScene" uid="uid://bu43dfg2vm2pp" path="res://systems/diffuculty_system.tscn" id="7_qx0q2"]
 [ext_resource type="PackedScene" uid="uid://h7ifi3hqgvmo" path="res://systems/mob_spawn.tscn" id="8_v2dx6"]
+[ext_resource type="PackedScene" uid="uid://cjss50puhod7c" path="res://ui/game_paused_ui.tscn" id="9_isjrj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k588b"]
 texture = ExtResource("3_pcupi")
@@ -206,6 +207,7 @@ y_sort_enabled = true
 script = ExtResource("1_cqiaw")
 game_ui = NodePath("GameUI")
 game_over_ui_prefab = ExtResource("2_43lwy")
+game_paused_ui_prefab = ExtResource("9_isjrj")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4guju")

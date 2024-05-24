@@ -10,13 +10,13 @@ texture_margin_top = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(0, 0, 192, 64)
 
-[sub_resource type="SystemFont" id="SystemFont_cnxqo"]
+[sub_resource type="SystemFont" id="SystemFont_hciur"]
 font_names = PackedStringArray("Impact")
 font_weight = 999
 subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_pkx7g"]
-font = SubResource("SystemFont_cnxqo")
+font = SubResource("SystemFont_hciur")
 font_size = 50
 font_color = Color(0.65098, 0.0901961, 0.101961, 1)
 outline_size = 10

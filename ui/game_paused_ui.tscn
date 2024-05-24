@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjss50puhod7c"]
+
+[ext_resource type="Script" path="res://ui/game_paused_ui.gd" id="1_e15wl"]
+[ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_i5x5q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2p2ag"]
+texture = ExtResource("1_i5x5q")
+texture_margin_top = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(0, 0, 192, 64)
+
+[sub_resource type="SystemFont" id="SystemFont_cnxqo"]
+font_names = PackedStringArray("Impact")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_esh15"]
+font = SubResource("SystemFont_cnxqo")
+font_size = 50
+font_color = Color(0.65098, 0.0901961, 0.101961, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_nwl8e"]
+font_names = PackedStringArray("Impact")
+font_weight = 999
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgh48"]
+
+[node name="GamePausedUi" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_e15wl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.196078, 0.196078, 0.733333)
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -252.0
+offset_top = 110.0
+offset_right = 252.0
+offset_bottom = 269.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2p2ag")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.5
+offset_top = -42.5
+offset_right = 90.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_esh15")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_top = -185.0
+offset_right = 59.0
+offset_bottom = -127.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.65098, 0.0901961, 0.101961, 1)
+theme_override_fonts/font = SubResource("SystemFont_nwl8e")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lgh48")
+text = "Return"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
