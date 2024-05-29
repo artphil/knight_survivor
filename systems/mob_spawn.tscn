@@ -14,7 +14,7 @@ point_count = 5
 [node name="MobSpawn" type="Node2D"]
 position = Vector2(576, 324)
 script = ExtResource("1_xqooo")
-creatures = Array[PackedScene]([ExtResource("2_7jkhc"), ExtResource("3_8twwv"), ExtResource("4_g24pq")])
+creatures = Array[PackedScene]([ExtResource("4_g24pq"), ExtResource("3_8twwv"), ExtResource("2_7jkhc")])
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(-582, -338)

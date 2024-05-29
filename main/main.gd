@@ -11,7 +11,6 @@ var render_scene
 func _ready():
   GameManager.main = self
   change_scene(HOME)
-  print(scenes, ' ', typeof(scenes), ' ', TYPE_DICTIONARY)
 
 
 func _process(_delta):

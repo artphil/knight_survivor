@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://c522nfb88wobo"]
+[gd_scene load_steps=12 format=3 uid="uid://c522nfb88wobo"]
 
 [ext_resource type="Script" path="res://ui/game_over_ui.gd" id="1_l7cjr"]
 [ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_nc6kl"]
 [ext_resource type="Texture2D" uid="uid://ckv6uebeov5sx" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="2_ica16"]
+[ext_resource type="FontFile" uid="uid://v6pg643d8b6t" path="res://addons/Deutsch-Gothic/Deutsch.ttf" id="3_n8ms2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a74sv"]
 texture = ExtResource("1_nc6kl")
@@ -10,13 +11,8 @@ texture_margin_top = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(0, 0, 192, 64)
 
-[sub_resource type="SystemFont" id="SystemFont_hciur"]
-font_names = PackedStringArray("Impact")
-font_weight = 999
-subpixel_positioning = 0
-
 [sub_resource type="LabelSettings" id="LabelSettings_pkx7g"]
-font = SubResource("SystemFont_hciur")
+font = ExtResource("3_n8ms2")
 font_size = 50
 font_color = Color(0.65098, 0.0901961, 0.101961, 1)
 outline_size = 10
@@ -30,13 +26,8 @@ texture_margin_right = 24.0
 texture_margin_bottom = 40.0
 region_rect = Rect2(32, 24, 128, 144)
 
-[sub_resource type="SystemFont" id="SystemFont_117mj"]
-font_names = PackedStringArray("Impact")
-font_weight = 999
-subpixel_positioning = 0
-
 [sub_resource type="LabelSettings" id="LabelSettings_afcba"]
-font = SubResource("SystemFont_117mj")
+font = ExtResource("3_n8ms2")
 font_size = 24
 font_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 
