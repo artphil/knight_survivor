@@ -85,7 +85,7 @@ position = Vector2(816, -1)
 texture = ExtResource("3_wnydm")
 
 [node name="Foam" type="Sprite2D" parent="."]
-position = Vector2(490, -259)
+position = Vector2(598, -416)
 texture = ExtResource("4_nelxi")
 
 [node name="Rocks04" type="Sprite2D" parent="."]

@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dys343w478kdl"]
+
+[ext_resource type="Texture2D" uid="uid://dbev28ahrqhyk" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_9Slides.png" id="1_m2qju"]
+[ext_resource type="Texture2D" uid="uid://c7cjk4edrmgh7" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_9Slides_Pressed.png" id="2_kewsx"]
+[ext_resource type="FontFile" uid="uid://c0md01m5x4sw0" path="res://addons/Salsa/Salsa-Regular.ttf" id="3_ab7ha"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4jde4"]
+texture = ExtResource("1_m2qju")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+modulate_color = Color(1, 0.666667, 0.733333, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uqa6w"]
+texture = ExtResource("1_m2qju")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e3yht"]
+texture = ExtResource("2_kewsx")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+
+[resource]
+default_font = ExtResource("3_ab7ha")
+default_font_size = 22
+Button/colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+Button/styles/hover = SubResource("StyleBoxTexture_4jde4")
+Button/styles/normal = SubResource("StyleBoxTexture_uqa6w")
+Button/styles/pressed = SubResource("StyleBoxTexture_e3yht")

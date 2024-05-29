@@ -1,26 +1,34 @@
 extends Node2D
 
+enum {HOME, GAME, SETTINGS}
 
-@export var game_ui: CanvasLayer
-@export var game_over_ui_prefab: PackedScene
-@export var game_paused_ui_prefab: PackedScene
+@export var scenes: Array[PackedScene]
 
+var active_scene = HOME
+var last_scene = HOME
+var render_scene
 
-func _ready() -> void:
-  GameManager.game_over.connect(finish_game)
+func _ready():
+  GameManager.main = self
+  change_scene(HOME)
+  print(scenes, ' ', typeof(scenes), ' ', TYPE_DICTIONARY)
+
 
 func _process(_delta):
-  if Input.is_action_just_pressed("pause"):
-    get_tree().paused = true
-    var game_paused_ui = game_paused_ui_prefab.instantiate()
-    add_child(game_paused_ui)
+  # if Ctrl.not_save():
+    # Ctrl.save_data()
+  pass
 
-func finish_game() -> void:
-  if game_ui:
-    game_ui.queue_free()
-    game_ui = null
+func change_scene(scene):
+  if render_scene:
+    render_scene.queue_free()
 
-  var game_over_ui = game_over_ui_prefab.instantiate()
+  last_scene = active_scene
+  active_scene = scene
 
-  add_child(game_over_ui)
+  render_scene = scenes[active_scene].instantiate()
+  add_child(render_scene)
 
+func back_scene():
+  var scene = last_scene
+  change_scene(scene)

@@ -26,6 +26,11 @@ GameManager="*res://scripts/game_manager.gd"
 
 window/stretch/mode="canvas_items"
 
+[gui]
+
+theme/custom="res://theme/theme.tres"
+theme/custom_font="res://addons/Salsa/Salsa-Regular.ttf"
+
 [input]
 
 move_up={

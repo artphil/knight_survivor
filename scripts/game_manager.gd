@@ -2,6 +2,8 @@ extends Node
 
 signal game_over
 
+var main: Node2D
+
 var player_position: Vector2
 var player: Player
 var is_game_over: bool = false
@@ -41,3 +43,5 @@ func reset() -> void:
   for commection in game_over.get_connections():
     game_over.disconnect(commection.callable)
 
+func go_game():
+  main.change_scene(main.GAME)

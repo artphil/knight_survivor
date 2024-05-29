@@ -1,0 +1,163 @@
+[gd_scene load_steps=18 format=3 uid="uid://cdv42aokdudcl"]
+
+[ext_resource type="Script" path="res://home/home.gd" id="1_uca7i"]
+[ext_resource type="Texture2D" uid="uid://ckv6uebeov5sx" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="2_ax47d"]
+[ext_resource type="Theme" uid="uid://dys343w478kdl" path="res://theme/theme.tres" id="3_gg88j"]
+[ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="4_fb53l"]
+[ext_resource type="FontFile" uid="uid://v6pg643d8b6t" path="res://addons/Deutsch-Gothic/Deutsch.ttf" id="5_t5dtk"]
+[ext_resource type="Texture2D" uid="uid://jpktjsw0a5xx" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="6_kunyd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ux7b8"]
+texture = ExtResource("2_ax47d")
+texture_margin_left = 64.0
+texture_margin_top = 64.0
+texture_margin_right = 64.0
+texture_margin_bottom = 64.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0w6aw"]
+texture = ExtResource("4_fb53l")
+texture_margin_left = 64.0
+texture_margin_right = 64.0
+axis_stretch_horizontal = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_y34o7"]
+font = ExtResource("5_t5dtk")
+font_size = 80
+font_color = Color(1, 0.729412, 0.184314, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akgfn"]
+atlas = ExtResource("6_kunyd")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mksna"]
+atlas = ExtResource("6_kunyd")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsjrn"]
+atlas = ExtResource("6_kunyd")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mkmp"]
+atlas = ExtResource("6_kunyd")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tipyo"]
+atlas = ExtResource("6_kunyd")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6aju"]
+atlas = ExtResource("6_kunyd")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmxdt"]
+atlas = ExtResource("6_kunyd")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhus1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akgfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mksna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsjrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mkmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tipyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6aju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmxdt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Home" type="Node2D"]
+script = ExtResource("1_uca7i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.580392, 0.54902, 0.517647, 1)
+
+[node name="Buttons" type="Panel" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -296.0
+offset_top = -181.0
+offset_bottom = 181.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ux7b8")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Buttons"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Buttons/MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Buttons/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_gg88j")
+text = "START"
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 64.0
+offset_top = 67.0
+offset_right = 778.0
+offset_bottom = 283.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0w6aw")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Kinight Survivor"
+label_settings = SubResource("LabelSettings_y34o7")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(403, 480)
+scale = Vector2(3.04297, 2.89193)
+sprite_frames = SubResource("SpriteFrames_mhus1")
+autoplay = "default"
+frame_progress = 0.468222
+
+[connection signal="pressed" from="CanvasLayer/Buttons/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
