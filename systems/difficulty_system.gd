@@ -18,6 +18,5 @@ func _process(delta):
 
   var wave_sin = sin(TAU * (time / wave_duration))
   var wave_factor = remap(wave_sin, -1.0, 1.0, break_intensity, 1.0)
-  print('s: %.2f -> f: %.2f' % [wave_sin, wave_factor])
 
   mob_spawn.mobs_per_minute = spawn_rate * wave_factor
