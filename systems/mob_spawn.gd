@@ -9,12 +9,14 @@ extends Node2D
 
 var mobs_per_minute: float = 60
 var cooldown: float = 0
-var time: float = 0
+var increase_cooldown: float = 0
+var increase_factor: int = 0
+var weight_mobs: Array[float] = []
 
 func _process(delta: float) -> void:
   if GameManager.is_game_over: return
 
-  time += delta
+  increase_mobs(delta)
   cooldown -= delta
 
   if cooldown > 0: return
@@ -25,6 +27,8 @@ func _process(delta: float) -> void:
   spown_mob()
 
 func spown_mob():
+  if creatures.size() == 0: return
+
   var point = get_point()
   var world = get_world_2d().direct_space_state
   var parameters = PhysicsPointQueryParameters2D.new()
@@ -33,10 +37,7 @@ func spown_mob():
 
   if not result.is_empty(): return
 
-  var max_index = int(time / increase_interval)
-  max_index = min(max_index, creatures.size() - 1)
-
-  var index = randi_range(0, max_index)
+  var index = Util.weight_rand(weight_mobs)
   var creature_scene = creatures[index].instantiate()
   creature_scene.global_position = point
   get_parent().add_child(creature_scene)
@@ -46,3 +47,13 @@ func get_point() -> Vector2:
   path.progress_ratio = randf()
   return path.global_position
 
+func increase_mobs(delta):
+  increase_cooldown -= delta
+
+  if increase_cooldown > 0: return
+
+  increase_cooldown = increase_interval
+  increase_factor += 1
+  weight_mobs = []
+  for i in creatures.size():
+    weight_mobs.push_back(max(0, increase_factor -i))

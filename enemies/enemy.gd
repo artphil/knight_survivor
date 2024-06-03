@@ -14,8 +14,6 @@ const damage_digit_prefab: PackedScene = preload('res://misc/damage_digit.tscn')
 @export var drop_chance: float = 0.1
 @export var items_prefab: Array[PackedScene]
 @export var items_chance: Array[float]
-@export var energy: int = 1
-
 
 @onready var damage_marker: Marker2D = $Marker
 @onready var notifier: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D

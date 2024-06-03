@@ -241,12 +241,10 @@ update_scale = false
 
 [node name="DiffucultySystem" parent="." node_paths=PackedStringArray("mob_spawn") instance=ExtResource("8_mhrw4")]
 mob_spawn = NodePath("../MobSpawn")
-spawn_rate_base = 40.0
-spawn_rate_per_minute = 20.0
-break_intensity = 0.1
 
 [node name="MobSpawn" parent="." instance=ExtResource("9_0xkfs")]
 position = Vector2(577, 323)
+scale = Vector2(1.06423, 1.01246)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 323)
