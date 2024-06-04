@@ -13,15 +13,18 @@ static func sum_array_i(array: Array[int]) -> int:
 static func sum_array_f(array: Array[float]) -> float:
   return array.reduce(func(a: float, b: float): return a + b)
 
-static func weight_rand(weigths: Array[float]) -> int:
-  var total = sum_array_f(weigths)
-  var size = weigths.size()
-  var bet = randf() * total
-  var index = 0
-  while index < size:
-    if bet <= weigths[index]:
+static func weight_rand(weights: Array[float]) -> int:
+  var size = weights.size()
+  if size < 2: return size -1
+
+  var total = sum_array_f(weights)
+  var random = randf() * total
+
+  var cumulative_weight = 0.0
+  for index in size:
+    cumulative_weight += weights[index]
+
+    if random <= cumulative_weight:
       return index
-    else:
-      bet -= weigths[index]
-      index += 1
-  return 0
+
+  return weights.size() - 1
