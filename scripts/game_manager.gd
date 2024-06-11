@@ -19,7 +19,7 @@ var level: int = 1
 func _process(delta):
   if is_game_over: return
 
-  max_experience = 10 * level
+  max_experience = 5 * (2 ** level)
   if experience >= max_experience:
     level += 1
     experience = 0
