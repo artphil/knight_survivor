@@ -24,6 +24,7 @@ func _process(delta):
   max_experience = 6 + 2 * (2 ** level)
   if experience >= max_experience:
     level += 1
+    player.sword_attack += 1
     experience = 0
     player_update.emit()
 
