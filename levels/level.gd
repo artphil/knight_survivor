@@ -8,12 +8,12 @@ extends Node2D
 
 func _ready() -> void:
   GameManager.game_over.connect(finish_game)
+  GameManager.player_update.connect(update_player)
 
-func _process(_delta):
-  if Input.is_action_just_pressed("pause"):
-    get_tree().paused = true
-    var game_paused_ui = game_paused_ui_prefab.instantiate()
-    add_child(game_paused_ui)
+func update_player():
+  get_tree().paused = true
+  var game_paused_ui = game_paused_ui_prefab.instantiate()
+  add_child(game_paused_ui)
 
 func finish_game() -> void:
   if game_ui:

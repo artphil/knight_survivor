@@ -1,6 +1,7 @@
 extends Node
 
 signal game_over
+signal player_update
 
 var main: Node2D
 
@@ -23,6 +24,7 @@ func _process(delta):
   if experience >= max_experience:
     level += 1
     experience = 0
+    player_update.emit()
 
   time_elapse += delta
   time_elapse_string = Util.get_time(time_elapse)
@@ -47,6 +49,9 @@ func reset() -> void:
 
   for commection in game_over.get_connections():
     game_over.disconnect(commection.callable)
+
+  for commection in player_update.get_connections():
+    player_update.disconnect(commection.callable)
 
 func go_game():
   main.change_scene(main.GAME)

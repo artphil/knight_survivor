@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjss50puhod7c"]
+[gd_scene load_steps=6 format=3 uid="uid://cjss50puhod7c"]
 
-[ext_resource type="Script" path="res://ui/game_paused_ui.gd" id="1_e15wl"]
-[ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_i5x5q"]
+[ext_resource type="Script" path="res://ui/player_update_ui.gd" id="1_b7uid"]
+[ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="2_43eus"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2p2ag"]
-texture = ExtResource("1_i5x5q")
+texture = ExtResource("2_43eus")
 texture_margin_top = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(0, 0, 192, 64)
@@ -21,16 +21,9 @@ font_color = Color(0.65098, 0.0901961, 0.101961, 1)
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="SystemFont" id="SystemFont_nwl8e"]
-font_names = PackedStringArray("Impact")
-font_weight = 999
-subpixel_positioning = 0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgh48"]
-
-[node name="GamePausedUi" type="CanvasLayer"]
+[node name="PlayerUpdateUi" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_e15wl")
+script = ExtResource("1_b7uid")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -69,22 +62,30 @@ label_settings = SubResource("LabelSettings_esh15")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Option1" type="Button" parent="."]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -59.0
-offset_top = -185.0
-offset_right = 59.0
-offset_bottom = -127.0
+offset_left = -281.0
+offset_top = -248.0
+offset_right = -42.0
+offset_bottom = -106.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(0.65098, 0.0901961, 0.101961, 1)
-theme_override_fonts/font = SubResource("SystemFont_nwl8e")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxEmpty_lgh48")
-text = "Return"
+text = "OPTION 1"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Option2" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = -248.0
+offset_right = 294.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "OPTION 2"

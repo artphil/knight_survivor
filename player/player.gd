@@ -3,16 +3,16 @@ extends CharacterBody2D
 
 
 @export_category('Movement')
-@export var speed: float = 3
+@export var speed: float = 2.5
 
 @export_category('Sword')
-@export var sword_attack: int = 2
+@export var sword_attack: int = 1
 
 @export_category('Aura')
 @export var energy: int = 0
 @export var max_energy: int = 30
 @export var energy_by_atack: int = 1
-@export var aura_damage: int = 2
+@export var aura_damage: int = 1
 @export var aura_prefab: PackedScene
 
 @export_category('Life')
