@@ -160,4 +160,19 @@ sprite_frames = SubResource("SpriteFrames_mhus1")
 autoplay = "default"
 frame_progress = 0.301466
 
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -514.5
+offset_top = -44.0
+offset_right = 514.5
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+text = "A / ← = LEFT | W / ↑ = UP | S / ↓ = DOWN |  D / → = RIGHT | Space / MouseLeft = ATTACK | CTRL = PAUSE"
+
 [connection signal="pressed" from="CanvasLayer/Buttons/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

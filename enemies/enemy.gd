@@ -14,6 +14,7 @@ const damage_digit_prefab: PackedScene = preload('res://misc/damage_digit.tscn')
 @export var drop_chance: float = 0.1
 @export var items_prefab: Array[PackedScene]
 @export var items_chance: Array[float]
+@export var experience: int = 1
 
 @onready var damage_marker: Marker2D = $Marker
 @onready var notifier: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
@@ -46,6 +47,7 @@ func damage(amount: int) -> void:
 
 func die() -> void:
 	GameManager.monsters_defeated += 1
+	GameManager.experience += experience
 
 	if death_prefab:
 		var death_scene: Node2D = death_prefab.instantiate()

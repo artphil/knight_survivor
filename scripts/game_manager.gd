@@ -12,14 +12,17 @@ var time_elapse_string: String
 var meat_counter: int = 0
 var gold_counter: int = 0
 var monsters_defeated: int = 0
-var total_defeated = {
-  'goblin': 0,
-  'pawn': 0,
-  'sheep': 0
-}
+var experience: float = 0.0
+var max_experience: float
+var level: int = 1
 
 func _process(delta):
   if is_game_over: return
+
+  max_experience = 10 * level
+  if experience >= max_experience:
+    level += 1
+    experience = 0
 
   time_elapse += delta
   time_elapse_string = Util.get_time(time_elapse)
@@ -39,6 +42,8 @@ func reset() -> void:
   meat_counter = 0
   gold_counter = 0
   monsters_defeated = 0
+  experience = 0.0
+  level = 1
 
   for commection in game_over.get_connections():
     game_over.disconnect(commection.callable)
