@@ -3,7 +3,7 @@ extends Node2D
 
 
 @export var creatures: Array[PackedScene]
-@export var increase_interval: float = 20
+@export var increase_interval: float = 25
 
 @onready var path = %PathFollow
 
@@ -56,4 +56,4 @@ func increase_mobs(delta):
   increase_factor += 1
   weight_mobs = []
   for i in creatures.size():
-    weight_mobs.push_back(max(0, increase_factor -i))
+    weight_mobs.push_back(2 * max(0, increase_factor -i))
