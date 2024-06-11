@@ -11,13 +11,18 @@ const damage_digit_prefab: PackedScene = preload('res://misc/damage_digit.tscn')
 @export var death_prefab: PackedScene
 
 @export_category('Drops')
-@export var drop_chance: float = 0.1
+@export var drop_chance_base: float = 0.1
 @export var items_prefab: Array[PackedScene]
 @export var items_chance: Array[float]
 @export var experience: int = 1
 
+var drop_chance: float
+
 @onready var damage_marker: Marker2D = $Marker
 @onready var notifier: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
+
+func _ready():
+	drop_chance = drop_chance_base * GameManager.luck
 
 func _process(delta):
 	life_time -= delta

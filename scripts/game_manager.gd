@@ -16,11 +16,12 @@ var monsters_defeated: int = 0
 var experience: float = 0.0
 var max_experience: float
 var level: int = 1
+var luck: float = 1.0
 
 func _process(delta):
   if is_game_over: return
 
-  max_experience = 5 * (2 ** level)
+  max_experience = 6 + 2 * (2 ** level)
   if experience >= max_experience:
     level += 1
     experience = 0
@@ -46,6 +47,7 @@ func reset() -> void:
   monsters_defeated = 0
   experience = 0.0
   level = 1
+  luck = 1.0
 
   for commection in game_over.get_connections():
     game_over.disconnect(commection.callable)

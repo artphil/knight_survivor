@@ -63,7 +63,7 @@ radius = 20.0
 [node name="Pawn" type="CharacterBody2D" groups=["enemy"]]
 motion_mode = 1
 script = ExtResource("1_jexql")
-attack_damage = 2
+attack_damage = 3
 death_prefab = ExtResource("2_4wy4a")
 items_prefab = Array[PackedScene]([ExtResource("3_vhs0a"), ExtResource("3_q2r35")])
 items_chance = Array[float]([4.0, 1.0])

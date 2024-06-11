@@ -3,28 +3,25 @@ extends CanvasLayer
 @onready var option1 = $Option1
 @onready var option2 = $Option2
 
-var options = ['ATTACK', 'SPEED', 'SPECIAL']
+var options = ['ATTACK', 'SPEED', 'SPECIAL', 'LUCK']
 
 func _ready():
-  var opt = options[randi() % options.size()]
+  var opt1 = options[randi() % options.size()]
+  connect_function(option1, opt1)
 
-  option1.text = '+ ' + opt
-  if opt == 'ATTACK':
-    option1.pressed.connect(improve_attack)
-  elif opt == 'SPEED':
-    option1.pressed.connect(improve_speed)
-  elif opt == 'SPECIAL':
-    option1.pressed.connect(improve_special)
+  var opt2 = options[randi() % options.size()]
+  connect_function(option2, opt2)
 
-  opt = options[randi() % options.size()]
-
-  option2.text = '+ ' + opt
-  if opt == 'ATTACK':
-    option2.pressed.connect(improve_attack)
-  elif opt == 'SPEED':
-    option2.pressed.connect(improve_speed)
-  elif opt == 'SPECIAL':
-    option2.pressed.connect(improve_special)
+func connect_function(button: Button, option: String):
+  button.text = '+ ' + option
+  if option == 'ATTACK':
+    button.pressed.connect(improve_attack)
+  elif option == 'SPEED':
+    button.pressed.connect(improve_speed)
+  elif option == 'SPECIAL':
+    button.pressed.connect(improve_special)
+  elif option == 'LUCK':
+    button.pressed.connect(improve_luck)
 
 
 func return_game():
@@ -42,4 +39,8 @@ func improve_speed():
 
 func improve_special():
   GameManager.player.aura_damage += 1
+  return_game()
+
+func improve_luck():
+  GameManager.luck += 0.1
   return_game()
