@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://cvrisvbi4sm1c"]
 
-[ext_resource type="Texture2D" uid="uid://s2vllouooxun" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_dlkrs"]
 [ext_resource type="Script" path="res://ui/game_ui.gd" id="1_ds8hd"]
-[ext_resource type="Texture2D" uid="uid://c3uhn1vvu2jtj" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="3_87v4e"]
-[ext_resource type="Texture2D" uid="uid://dggeqma22obbe" path="res://addons/Tiny Swords/Resources/Resources/G_Idle_(NoShadow).png" id="4_ile71"]
+[ext_resource type="Texture2D" uid="uid://s2vllouooxun" path="res://addons/grafics/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="2_nrvi2"]
+[ext_resource type="Texture2D" uid="uid://c3uhn1vvu2jtj" path="res://addons/grafics/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="3_5sxmt"]
+[ext_resource type="Texture2D" uid="uid://dggeqma22obbe" path="res://addons/grafics/Tiny Swords/Resources/Resources/G_Idle_(NoShadow).png" id="4_fqov5"]
 
 [sub_resource type="SystemFont" id="SystemFont_b8uua"]
 font_names = PackedStringArray("Impact")
@@ -17,7 +17,7 @@ outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tepiv"]
-texture = ExtResource("1_dlkrs")
+texture = ExtResource("2_nrvi2")
 texture_margin_left = 32.0
 texture_margin_top = 16.0
 texture_margin_right = 32.0
@@ -27,11 +27,11 @@ axis_stretch_vertical = 2
 region_rect = Rect2(32, 48, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g5aia"]
-atlas = ExtResource("3_87v4e")
+atlas = ExtResource("3_5sxmt")
 region = Rect2(40, 48, 56, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_431hd"]
-atlas = ExtResource("4_ile71")
+atlas = ExtResource("4_fqov5")
 region = Rect2(40, 48, 56, 56)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1e2xg"]

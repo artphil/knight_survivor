@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cjss50puhod7c"]
 
 [ext_resource type="Script" path="res://ui/player_update_ui.gd" id="1_b7uid"]
-[ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="2_43eus"]
+[ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/grafics/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="2_aps1k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2p2ag"]
-texture = ExtResource("2_43eus")
+texture = ExtResource("2_aps1k")
 texture_margin_top = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(0, 0, 192, 64)

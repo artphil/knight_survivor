@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dny3nmash2gc4"]
 
-[ext_resource type="Texture2D" uid="uid://5dav6gsup2g4" path="res://addons/Tiny Swords/Deco/16.png" id="1_uw1li"]
+[ext_resource type="Texture2D" uid="uid://5dav6gsup2g4" path="res://addons/grafics/Tiny Swords/Deco/16.png" id="1_uw1li"]
 
 [sub_resource type="Animation" id="Animation_rirnd"]
 length = 0.001

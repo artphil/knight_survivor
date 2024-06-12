@@ -1,30 +1,30 @@
 [gd_scene load_steps=11 format=3 uid="uid://dby0wr46tiqxd"]
 
 [ext_resource type="Script" path="res://misc/gold_collector.gd" id="1_w2g3i"]
-[ext_resource type="Texture2D" uid="uid://c7058kvtx4hlf" path="res://addons/Tiny Swords/Resources/Resources/G_Spawn.png" id="2_yjn5m"]
+[ext_resource type="Texture2D" uid="uid://c7058kvtx4hlf" path="res://addons/grafics/Tiny Swords/Resources/Resources/G_Spawn.png" id="2_aaj7d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aeswh"]
-atlas = ExtResource("2_yjn5m")
+atlas = ExtResource("2_aaj7d")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fgyjs"]
-atlas = ExtResource("2_yjn5m")
+atlas = ExtResource("2_aaj7d")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oddsv"]
-atlas = ExtResource("2_yjn5m")
+atlas = ExtResource("2_aaj7d")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rilxd"]
-atlas = ExtResource("2_yjn5m")
+atlas = ExtResource("2_aaj7d")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yq4sc"]
-atlas = ExtResource("2_yjn5m")
+atlas = ExtResource("2_aaj7d")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mac57"]
-atlas = ExtResource("2_yjn5m")
+atlas = ExtResource("2_aaj7d")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ymqr2"]

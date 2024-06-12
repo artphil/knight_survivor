@@ -3,31 +3,31 @@
 [ext_resource type="Script" path="res://enemies/enemy.gd" id="1_yx6o6"]
 [ext_resource type="PackedScene" uid="uid://c54vemraksi4v" path="res://misc/skull.tscn" id="2_7oejm"]
 [ext_resource type="PackedScene" uid="uid://dl6glbufckjbd" path="res://misc/meat.tscn" id="3_0g4av"]
-[ext_resource type="Texture2D" uid="uid://d23vevml3a2v3" path="res://addons/Tiny Swords/Resources/Sheep/HappySheep_Bouncing.png" id="3_uce7g"]
 [ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="4_3jmkb"]
+[ext_resource type="Texture2D" uid="uid://d23vevml3a2v3" path="res://addons/grafics/Tiny Swords/Resources/Sheep/HappySheep_Bouncing.png" id="4_rq04f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ym42f"]
-atlas = ExtResource("3_uce7g")
+atlas = ExtResource("4_rq04f")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_016hs"]
-atlas = ExtResource("3_uce7g")
+atlas = ExtResource("4_rq04f")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5fyon"]
-atlas = ExtResource("3_uce7g")
+atlas = ExtResource("4_rq04f")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q7h3i"]
-atlas = ExtResource("3_uce7g")
+atlas = ExtResource("4_rq04f")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sfiyh"]
-atlas = ExtResource("3_uce7g")
+atlas = ExtResource("4_rq04f")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oah73"]
-atlas = ExtResource("3_uce7g")
+atlas = ExtResource("4_rq04f")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lgiij"]

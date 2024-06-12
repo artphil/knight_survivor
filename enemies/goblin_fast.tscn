@@ -4,31 +4,31 @@
 [ext_resource type="PackedScene" uid="uid://c54vemraksi4v" path="res://misc/skull.tscn" id="2_31mqj"]
 [ext_resource type="PackedScene" uid="uid://dl6glbufckjbd" path="res://misc/meat.tscn" id="3_3k66k"]
 [ext_resource type="PackedScene" uid="uid://dby0wr46tiqxd" path="res://misc/gold.tscn" id="4_nga7k"]
-[ext_resource type="Texture2D" uid="uid://bguoapgl42mp0" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png" id="5_4di5r"]
+[ext_resource type="Texture2D" uid="uid://bguoapgl42mp0" path="res://addons/grafics/Tiny Swords/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png" id="5_ypy2f"]
 [ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="6_twgke"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3sth"]
-atlas = ExtResource("5_4di5r")
+atlas = ExtResource("5_ypy2f")
 region = Rect2(0, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k7ofl"]
-atlas = ExtResource("5_4di5r")
+atlas = ExtResource("5_ypy2f")
 region = Rect2(192, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfvw5"]
-atlas = ExtResource("5_4di5r")
+atlas = ExtResource("5_ypy2f")
 region = Rect2(384, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n2i4m"]
-atlas = ExtResource("5_4di5r")
+atlas = ExtResource("5_ypy2f")
 region = Rect2(576, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uyonx"]
-atlas = ExtResource("5_4di5r")
+atlas = ExtResource("5_ypy2f")
 region = Rect2(768, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oe7vs"]
-atlas = ExtResource("5_4di5r")
+atlas = ExtResource("5_ypy2f")
 region = Rect2(960, 192, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lgiij"]

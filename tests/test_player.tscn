@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dx6ijkt5nmkca"]
 
-[ext_resource type="Texture2D" uid="uid://bthkdq73cxejp" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_ijeb0"]
+[ext_resource type="Texture2D" uid="uid://bthkdq73cxejp" path="res://addons/grafics/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_ijeb0"]
 [ext_resource type="PackedScene" uid="uid://cyur00vudnqgy" path="res://player/player.tscn" id="2_r86wf"]
 
 [node name="test_player" type="Node2D"]

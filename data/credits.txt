@@ -11,6 +11,8 @@ https://godotengine.org
 
 ASSETS
 
+Grafics
+
 Tiny Swords
 Pixel Frog
 These assets are released under a Creative Commons Zero (CC0) license. You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. 
@@ -20,6 +22,18 @@ Particle Pack
 Kenney
 These assets are released under a Creative Commons Zero (CC0) license. You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. 
 https://kenney.nl/assets/particle-pack
+
+Sounds
+
+Swosh Sword Swing
+qubodup
+These assets are released under a Creative Commons Zero (CC0) license. You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. 
+https://freesound.org/people/qubodup/sounds/59992/
+
+Zombie Hit
+MisterKidX
+These assets are released under a Creative Commons Attribution 4.0 license. You are free to share (to copy, distribute and transmit) and to remix (to adapt and modify) as long as you credit the author of the sound. 
+https://freesound.org/people/MisterKidX/sounds/454831/
 
 Fonts
 

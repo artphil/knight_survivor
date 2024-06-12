@@ -34,6 +34,8 @@ var was_running: bool = false
 @onready var hitbox_area: Area2D = $HitboxArea
 @onready var health_progress: ProgressBar = $HealthProgress
 @onready var energy_progress: ProgressBar = $EnergyProgress
+@onready var audio_sword: AudioStreamPlayer = $AudioSword
+@onready var audio_hit: AudioStreamPlayer = $AudioHit
 
 
 func _ready() -> void:
@@ -106,6 +108,7 @@ func attack() -> void:
 		return
 
 	animation.play("attack_side_%d" % randi_range(1, 2))
+	audio_sword.play()
 
 	is_attacking = true
 	attack_cooldown = 0.6
@@ -135,6 +138,7 @@ func hit_detect(delta: float) -> void:
 	var enemies = hitbox_area.get_overlapping_bodies()
 	for body in enemies:
 		if body.is_in_group('enemy'):
+			audio_hit.play()
 			var enemy: Enemy = body
 			var damage_value = enemy.attack_damage
 			energy += damage_value

@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://home/home.gd" id="1_uca7i"]
 [ext_resource type="PackedScene" uid="uid://cprdr5pd2q307" path="res://ui/credits_ui.tscn" id="2_3hr7k"]
-[ext_resource type="Texture2D" uid="uid://ckv6uebeov5sx" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="2_ax47d"]
 [ext_resource type="Theme" uid="uid://dys343w478kdl" path="res://theme/theme.tres" id="3_gg88j"]
-[ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="4_fb53l"]
-[ext_resource type="FontFile" uid="uid://v6pg643d8b6t" path="res://addons/Deutsch-Gothic/Deutsch.ttf" id="5_t5dtk"]
-[ext_resource type="Texture2D" uid="uid://jpktjsw0a5xx" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="6_kunyd"]
+[ext_resource type="Texture2D" uid="uid://ckv6uebeov5sx" path="res://addons/grafics/Tiny Swords/UI/Banners/Banner_Vertical.png" id="3_nkr4y"]
+[ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/grafics/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="5_oty27"]
+[ext_resource type="FontFile" uid="uid://v6pg643d8b6t" path="res://addons/fonts/Deutsch-Gothic/Deutsch.ttf" id="6_co3sf"]
+[ext_resource type="Texture2D" uid="uid://jpktjsw0a5xx" path="res://addons/grafics/Tiny Swords/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="7_ywlbf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ux7b8"]
-texture = ExtResource("2_ax47d")
+texture = ExtResource("3_nkr4y")
 texture_margin_left = 64.0
 texture_margin_top = 64.0
 texture_margin_right = 64.0
@@ -18,44 +18,44 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0w6aw"]
-texture = ExtResource("4_fb53l")
+texture = ExtResource("5_oty27")
 texture_margin_left = 64.0
 texture_margin_right = 64.0
 axis_stretch_horizontal = 1
 
 [sub_resource type="LabelSettings" id="LabelSettings_y34o7"]
-font = ExtResource("5_t5dtk")
+font = ExtResource("6_co3sf")
 font_size = 80
 font_color = Color(1, 0.729412, 0.184314, 1)
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_akgfn"]
-atlas = ExtResource("6_kunyd")
+atlas = ExtResource("7_ywlbf")
 region = Rect2(0, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mksna"]
-atlas = ExtResource("6_kunyd")
+atlas = ExtResource("7_ywlbf")
 region = Rect2(192, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gsjrn"]
-atlas = ExtResource("6_kunyd")
+atlas = ExtResource("7_ywlbf")
 region = Rect2(384, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8mkmp"]
-atlas = ExtResource("6_kunyd")
+atlas = ExtResource("7_ywlbf")
 region = Rect2(576, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tipyo"]
-atlas = ExtResource("6_kunyd")
+atlas = ExtResource("7_ywlbf")
 region = Rect2(768, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6aju"]
-atlas = ExtResource("6_kunyd")
+atlas = ExtResource("7_ywlbf")
 region = Rect2(960, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmxdt"]
-atlas = ExtResource("6_kunyd")
+atlas = ExtResource("7_ywlbf")
 region = Rect2(1152, 0, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mhus1"]

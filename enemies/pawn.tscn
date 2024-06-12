@@ -1,34 +1,34 @@
 [gd_scene load_steps=15 format=3 uid="uid://b8psdp3fbcrqe"]
 
-[ext_resource type="Texture2D" uid="uid://c4rbhxg1lm3q1" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="1_bblmc"]
 [ext_resource type="Script" path="res://enemies/enemy.gd" id="1_jexql"]
 [ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="2_1lhn7"]
 [ext_resource type="PackedScene" uid="uid://c54vemraksi4v" path="res://misc/skull.tscn" id="2_4wy4a"]
 [ext_resource type="PackedScene" uid="uid://dby0wr46tiqxd" path="res://misc/gold.tscn" id="3_q2r35"]
 [ext_resource type="PackedScene" uid="uid://dl6glbufckjbd" path="res://misc/meat.tscn" id="3_vhs0a"]
+[ext_resource type="Texture2D" uid="uid://c4rbhxg1lm3q1" path="res://addons/grafics/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="5_04qgl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxfm3"]
-atlas = ExtResource("1_bblmc")
+atlas = ExtResource("5_04qgl")
 region = Rect2(0, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4c0qk"]
-atlas = ExtResource("1_bblmc")
+atlas = ExtResource("5_04qgl")
 region = Rect2(192, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5rr3v"]
-atlas = ExtResource("1_bblmc")
+atlas = ExtResource("5_04qgl")
 region = Rect2(384, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0iuco"]
-atlas = ExtResource("1_bblmc")
+atlas = ExtResource("5_04qgl")
 region = Rect2(576, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsy8b"]
-atlas = ExtResource("1_bblmc")
+atlas = ExtResource("5_04qgl")
 region = Rect2(768, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xc3do"]
-atlas = ExtResource("1_bblmc")
+atlas = ExtResource("5_04qgl")
 region = Rect2(960, 192, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lgiij"]

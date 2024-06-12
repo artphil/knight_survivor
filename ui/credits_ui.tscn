@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://cprdr5pd2q307"]
 
 [ext_resource type="Script" path="res://ui/credits_ui.gd" id="1_lwlr5"]
-[ext_resource type="Texture2D" uid="uid://ckv6uebeov5sx" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="2_sgqjl"]
-[ext_resource type="Texture2D" uid="uid://bfyw1psdfqkkf" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Blue_3Slides.png" id="3_hruxn"]
-[ext_resource type="FontFile" uid="uid://v6pg643d8b6t" path="res://addons/Deutsch-Gothic/Deutsch.ttf" id="4_1sqkw"]
+[ext_resource type="Texture2D" uid="uid://ckv6uebeov5sx" path="res://addons/grafics/Tiny Swords/UI/Banners/Banner_Vertical.png" id="2_dqmoq"]
+[ext_resource type="Texture2D" uid="uid://bfyw1psdfqkkf" path="res://addons/grafics/Tiny Swords/UI/Ribbons/Ribbon_Blue_3Slides.png" id="3_28054"]
+[ext_resource type="FontFile" uid="uid://v6pg643d8b6t" path="res://addons/fonts/Deutsch-Gothic/Deutsch.ttf" id="4_7k1od"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujkbk"]
-texture = ExtResource("2_sgqjl")
+texture = ExtResource("2_dqmoq")
 texture_margin_left = 32.0
 texture_margin_top = 48.0
 texture_margin_right = 32.0
@@ -19,12 +19,12 @@ region_rect = Rect2(32, 16, 128, 160)
 font_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8uwvd"]
-texture = ExtResource("3_hruxn")
+texture = ExtResource("3_28054")
 texture_margin_left = 64.0
 texture_margin_right = 64.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_swm5v"]
-font = ExtResource("4_1sqkw")
+font = ExtResource("4_7k1od")
 font_size = 48
 outline_size = 10
 outline_color = Color(0.0901961, 0.0901961, 0.0901961, 1)

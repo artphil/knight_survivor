@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://c6qk4oqvkv6sp"]
 
-[ext_resource type="Texture2D" uid="uid://buc0vqhd2jo5k" path="res://addons/Kenney Particle Pack/light_03.png" id="1_krisi"]
+[ext_resource type="Texture2D" uid="uid://buc0vqhd2jo5k" path="res://addons/grafics/Kenney Particle Pack/light_03.png" id="1_krisi"]
 [ext_resource type="Script" path="res://misc/area_damage.gd" id="1_wjptt"]
-[ext_resource type="Texture2D" uid="uid://b14o6h0jo48tn" path="res://addons/Kenney Particle Pack/magic_03.png" id="2_07p6t"]
-[ext_resource type="Texture2D" uid="uid://dqs5g5245lhnt" path="res://addons/Kenney Particle Pack/twirl_01.png" id="3_6i2sj"]
+[ext_resource type="Texture2D" uid="uid://b14o6h0jo48tn" path="res://addons/grafics/Kenney Particle Pack/magic_03.png" id="2_07p6t"]
+[ext_resource type="Texture2D" uid="uid://dqs5g5245lhnt" path="res://addons/grafics/Kenney Particle Pack/twirl_01.png" id="3_6i2sj"]
 
 [sub_resource type="Animation" id="Animation_w3fcb"]
 length = 0.001

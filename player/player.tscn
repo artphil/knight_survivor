@@ -1,9 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://cyur00vudnqgy"]
+[gd_scene load_steps=20 format=3 uid="uid://cyur00vudnqgy"]
 
-[ext_resource type="Texture2D" uid="uid://bthkdq73cxejp" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_xr0as"]
+[ext_resource type="Texture2D" uid="uid://bthkdq73cxejp" path="res://addons/Grafics/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_xr0as"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_ypwwh"]
 [ext_resource type="PackedScene" uid="uid://c6qk4oqvkv6sp" path="res://misc/aura.tscn" id="2_1j7wy"]
 [ext_resource type="PackedScene" uid="uid://dny3nmash2gc4" path="res://misc/skull_toten.tscn" id="3_pcefv"]
+[ext_resource type="AudioStream" uid="uid://b4vpx2qbf80bj" path="res://addons/sounds/59992__qubodup__swosh-sword-swing.ogg" id="5_q31y1"]
+[ext_resource type="AudioStream" uid="uid://cxo0fcs247fiv" path="res://addons/sounds/454831__misterkidx__zombie_hit_1.wav" id="6_7wpay"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40eji"]
 radius = 19.0263
@@ -200,3 +202,9 @@ theme_override_styles/background = SubResource("StyleBoxFlat_rl32j")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ietc5")
 value = 40.13
 show_percentage = false
+
+[node name="AudioSword" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_q31y1")
+
+[node name="AudioHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7wpay")
