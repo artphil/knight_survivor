@@ -1,6 +1,6 @@
 Knight Suvivor Game
 
-Designed by Artphil from Rafa Skoberg class on Santander Bootcamb DIO 2024
+Designed by Artphil based on Rafa Skoberg's class at Santander Bootcamb DIO 2024​
 Artphil https://artphil.github.io/
 Rafa Skoberg https://rafaskoberg.com/
 
