@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b78isskb4ds0h"
-path="res://.godot/imported/star_05.png-472bd4798de58cc66b5371a5c0da66c7.ctex"
+path="res://.godot/imported/star_05.png-388ff7ecb7fa02297dc65cf0d749b051.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Grafics/Kenney Particle Pack/star_05.png"
-dest_files=["res://.godot/imported/star_05.png-472bd4798de58cc66b5371a5c0da66c7.ctex"]
+source_file="res://addons/grafics/Kenney Particle Pack/star_05.png"
+dest_files=["res://.godot/imported/star_05.png-388ff7ecb7fa02297dc65cf0d749b051.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxpgs70hju1ml"
-path="res://.godot/imported/Wood_Tower_InConstruction.png-3bfaf6e60223bca8a9adc74882212939.ctex"
+path="res://.godot/imported/Wood_Tower_InConstruction.png-2153deab707f7288b44f26f841d14ddd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Grafics/Tiny Swords/Factions/Goblins/Buildings/Wood_Tower/Wood_Tower_InConstruction.png"
-dest_files=["res://.godot/imported/Wood_Tower_InConstruction.png-3bfaf6e60223bca8a9adc74882212939.ctex"]
+source_file="res://addons/grafics/Tiny Swords/Factions/Goblins/Buildings/Wood_Tower/Wood_Tower_InConstruction.png"
+dest_files=["res://.godot/imported/Wood_Tower_InConstruction.png-2153deab707f7288b44f26f841d14ddd.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqnlfqlh3pvs1"
-path="res://.godot/imported/Pawn_Yellow.png-454eb32f9c8ecb36d1bcf8ab0ee41dc7.ctex"
+path="res://.godot/imported/Pawn_Yellow.png-54ed0e6e6fbc699023c3ed5b4e10442c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Grafics/Tiny Swords/Factions/Knights/Troops/Pawn/Yellow/Pawn_Yellow.png"
-dest_files=["res://.godot/imported/Pawn_Yellow.png-454eb32f9c8ecb36d1bcf8ab0ee41dc7.ctex"]
+source_file="res://addons/grafics/Tiny Swords/Factions/Knights/Troops/Pawn/Yellow/Pawn_Yellow.png"
+dest_files=["res://.godot/imported/Pawn_Yellow.png-54ed0e6e6fbc699023c3ed5b4e10442c.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cexbqo0c0blv3"
-path="res://.godot/imported/Barrel_Blue.png-ecc560472bb394fb5f092eb5331fb5fb.ctex"
+path="res://.godot/imported/Barrel_Blue.png-0fb63a63ddcf1fd1b33e44679a1c86fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Grafics/Tiny Swords/Factions/Goblins/Troops/Barrel/Blue/Barrel_Blue.png"
-dest_files=["res://.godot/imported/Barrel_Blue.png-ecc560472bb394fb5f092eb5331fb5fb.ctex"]
+source_file="res://addons/grafics/Tiny Swords/Factions/Goblins/Troops/Barrel/Blue/Barrel_Blue.png"
+dest_files=["res://.godot/imported/Barrel_Blue.png-0fb63a63ddcf1fd1b33e44679a1c86fa.ctex"]
 
 [params]
 

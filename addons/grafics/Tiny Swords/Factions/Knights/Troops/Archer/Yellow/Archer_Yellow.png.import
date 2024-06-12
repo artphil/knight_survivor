@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba05h1dl00rhu"
-path="res://.godot/imported/Archer_Yellow.png-38c384fbba5624d0d523cde0d4ed64fa.ctex"
+path="res://.godot/imported/Archer_Yellow.png-7e9c2f5bf2de9e7200e8b90b164ebbe5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Grafics/Tiny Swords/Factions/Knights/Troops/Archer/Yellow/Archer_Yellow.png"
-dest_files=["res://.godot/imported/Archer_Yellow.png-38c384fbba5624d0d523cde0d4ed64fa.ctex"]
+source_file="res://addons/grafics/Tiny Swords/Factions/Knights/Troops/Archer/Yellow/Archer_Yellow.png"
+dest_files=["res://.godot/imported/Archer_Yellow.png-7e9c2f5bf2de9e7200e8b90b164ebbe5.ctex"]
 
 [params]
 

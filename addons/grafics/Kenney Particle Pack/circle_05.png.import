@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv200wj1t3qqn"
-path="res://.godot/imported/circle_05.png-fa4df2593a4b09f3f372117f7accc43e.ctex"
+path="res://.godot/imported/circle_05.png-3771f311b4dbebaf1ff89cca7869cd1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Grafics/Kenney Particle Pack/circle_05.png"
-dest_files=["res://.godot/imported/circle_05.png-fa4df2593a4b09f3f372117f7accc43e.ctex"]
+source_file="res://addons/grafics/Kenney Particle Pack/circle_05.png"
+dest_files=["res://.godot/imported/circle_05.png-3771f311b4dbebaf1ff89cca7869cd1e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1jsmvusunwee"
-path="res://.godot/imported/W_Spawn.png-2a4c12777ca79219ec65199a122fba63.ctex"
+path="res://.godot/imported/W_Spawn.png-cbe1fcc38c5e77ef30bec86f6bb7cd41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Grafics/Tiny Swords/Resources/Resources/W_Spawn.png"
-dest_files=["res://.godot/imported/W_Spawn.png-2a4c12777ca79219ec65199a122fba63.ctex"]
+source_file="res://addons/grafics/Tiny Swords/Resources/Resources/W_Spawn.png"
+dest_files=["res://.godot/imported/W_Spawn.png-cbe1fcc38c5e77ef30bec86f6bb7cd41.ctex"]
 
 [params]
 
