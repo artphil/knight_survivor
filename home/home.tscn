@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdv42aokdudcl"]
+[gd_scene load_steps=19 format=3 uid="uid://cdv42aokdudcl"]
 
 [ext_resource type="Script" path="res://home/home.gd" id="1_uca7i"]
+[ext_resource type="PackedScene" uid="uid://cprdr5pd2q307" path="res://ui/credits_ui.tscn" id="2_3hr7k"]
 [ext_resource type="Texture2D" uid="uid://ckv6uebeov5sx" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="2_ax47d"]
 [ext_resource type="Theme" uid="uid://dys343w478kdl" path="res://theme/theme.tres" id="3_gg88j"]
 [ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="4_fb53l"]
@@ -88,6 +89,7 @@ animations = [{
 
 [node name="Home" type="Node2D"]
 script = ExtResource("1_uca7i")
+credits_prefab = ExtResource("2_3hr7k")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -127,10 +129,15 @@ theme_override_constants/margin_bottom = 50
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Buttons/MarginContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/Buttons/MarginContainer/VBoxContainer"]
+[node name="StartButton" type="Button" parent="CanvasLayer/Buttons/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_gg88j")
 text = "START"
+
+[node name="CreditButton" type="Button" parent="CanvasLayer/Buttons/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_gg88j")
+text = "CREDITS"
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 offset_left = 64.0
@@ -176,4 +183,5 @@ size_flags_vertical = 8
 text = "A / Left = LEFT | W / Up = UP | S / Down = DOWN |  D / Right = RIGHT | Space / MouseLeft = ATTACK"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="CanvasLayer/Buttons/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons/MarginContainer/VBoxContainer/CreditButton" to="." method="_on_credit_button_pressed"]

@@ -1,0 +1,142 @@
+[gd_scene load_steps=9 format=3 uid="uid://cprdr5pd2q307"]
+
+[ext_resource type="Script" path="res://ui/credits_ui.gd" id="1_lwlr5"]
+[ext_resource type="Texture2D" uid="uid://ckv6uebeov5sx" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="2_sgqjl"]
+[ext_resource type="Texture2D" uid="uid://bfyw1psdfqkkf" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Blue_3Slides.png" id="3_hruxn"]
+[ext_resource type="FontFile" uid="uid://v6pg643d8b6t" path="res://addons/Deutsch-Gothic/Deutsch.ttf" id="4_1sqkw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujkbk"]
+texture = ExtResource("2_sgqjl")
+texture_margin_left = 32.0
+texture_margin_top = 48.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 16, 128, 160)
+
+[sub_resource type="LabelSettings" id="LabelSettings_inl1f"]
+font_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8uwvd"]
+texture = ExtResource("3_hruxn")
+texture_margin_left = 64.0
+texture_margin_right = 64.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_swm5v"]
+font = ExtResource("4_1sqkw")
+font_size = 48
+outline_size = 10
+outline_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+
+[node name="CreditsUI" type="Node2D"]
+script = ExtResource("1_lwlr5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.3)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="Background" type="Panel" parent="CanvasLayer/ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ujkbk")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ColorRect/MarginContainer/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/ColorRect/MarginContainer/Background/MarginContainer"]
+layout_mode = 2
+
+[node name="CreditLabel" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/Background/MarginContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Credits
+c
+
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+
+c"
+label_settings = SubResource("LabelSettings_inl1f")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Title" type="Panel" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -239.0
+offset_top = 65.0
+offset_right = 239.0
+offset_bottom = 196.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8uwvd")
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -38.0
+offset_right = 52.5
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_swm5v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 969.0
+offset_top = 59.0
+offset_right = 1077.0
+offset_bottom = 167.0
+text = "X"
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/Button" to="." method="_on_button_pressed"]

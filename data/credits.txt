@@ -1,0 +1,33 @@
+Knight Suvivor Game
+
+Designed by Artphil from Rafa Skoberg class on Santander Bootcamb DIO 2024
+Artphil https://artphil.github.io/
+Rafa Skoberg https://rafaskoberg.com/
+
+Make with GODOT
+Copyright (c) 2014-present Godot Engine contributors.
+Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+https://godotengine.org
+
+ASSETS
+
+Tiny Swords
+Pixel Frog
+These assets are released under a Creative Commons Zero (CC0) license. You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. 
+https://pixelfrog-assets.itch.io/tiny-swords
+
+Particle Pack
+Kenney
+These assets are released under a Creative Commons Zero (CC0) license. You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. 
+https://kenney.nl/assets/particle-pack
+
+Fonts
+
+Salsa
+Copyright (c) 2011 by John Vargas Beltrán john.vargasbeltran@gmail.com
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+
+Deutsch
+This font was created using Fontographer for Windows.  
+It is copyright by J. Fordyce but may be freely distributed provided it is not altered, no fee is charged for it, and this text file is included with it.
+Feel free to send comments to j4dice@aol.com
