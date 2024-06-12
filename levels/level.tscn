@@ -1,14 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://csxnfanavhv78"]
+[gd_scene load_steps=14 format=3 uid="uid://csxnfanavhv78"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_bw1a8"]
 [ext_resource type="PackedScene" uid="uid://c522nfb88wobo" path="res://ui/game_over_ui.tscn" id="2_2qjhk"]
 [ext_resource type="PackedScene" uid="uid://cjss50puhod7c" path="res://ui/player_update_ui.tscn" id="3_5pqbu"]
-[ext_resource type="Texture2D" uid="uid://brgu55o5uxxhq" path="res://addons/grafics/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="4_cx2it"]
-[ext_resource type="Texture2D" uid="uid://d2fp36jbp4gyu" path="res://addons/grafics/Tiny Swords/Terrain/Water/Water.png" id="5_lw80u"]
+[ext_resource type="Texture2D" uid="uid://brgu55o5uxxhq" path="res://addons/Grafics/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="4_cx2it"]
+[ext_resource type="Texture2D" uid="uid://d2fp36jbp4gyu" path="res://addons/Grafics/Tiny Swords/Terrain/Water/Water.png" id="5_lw80u"]
 [ext_resource type="PackedScene" uid="uid://cyur00vudnqgy" path="res://player/player.tscn" id="6_ykabd"]
 [ext_resource type="PackedScene" uid="uid://cvrisvbi4sm1c" path="res://ui/game_ui.tscn" id="7_03k85"]
 [ext_resource type="PackedScene" uid="uid://bu43dfg2vm2pp" path="res://systems/diffuculty_system.tscn" id="8_mhrw4"]
 [ext_resource type="PackedScene" uid="uid://h7ifi3hqgvmo" path="res://systems/mob_spawn.tscn" id="9_0xkfs"]
+[ext_resource type="AudioStream" uid="uid://d2hlml0t6mnqn" path="res://addons/sounds/alexander-nakarada-superepic.mp3" id="10_f64k2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k588b"]
 texture = ExtResource("4_cx2it")
@@ -253,3 +254,9 @@ position = Vector2(577, 323)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WorldLimit"]
 polygon = PackedVector2Array(-12917, 10828, -13143, -14877, 14779, -14560, 14598, 11054, 4654, 3120, 4642, -1798, 8078, -1775, 8081, -7229, 5897, -7264, 5867, -9671, -4310, -9669, -4281, -7224, -5881, -7256, -5857, -1844, -3121, -1816, -3089, 3104, 4649, 3115, 14643, 11190)
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("10_f64k2")
+volume_db = -10.0
+autoplay = true

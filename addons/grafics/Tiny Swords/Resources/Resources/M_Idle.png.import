@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuujew81uxney"
-path="res://.godot/imported/M_Idle.png-1115c1a7a0902f1fa431cbd9c516d5e2.ctex"
+path="res://.godot/imported/M_Idle.png-7cb1bffa223ec9fc36e7d76dbea33825.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/grafics/Tiny Swords/Resources/Resources/M_Idle.png"
-dest_files=["res://.godot/imported/M_Idle.png-1115c1a7a0902f1fa431cbd9c516d5e2.ctex"]
+source_file="res://addons/Grafics/Tiny Swords/Resources/Resources/M_Idle.png"
+dest_files=["res://.godot/imported/M_Idle.png-7cb1bffa223ec9fc36e7d76dbea33825.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brgu55o5uxxhq"
-path="res://.godot/imported/Tilemap_Flat.png-7f1208a6145a87aa0db75d964ac902c1.ctex"
+path="res://.godot/imported/Tilemap_Flat.png-19338f5eafb7c03a7417f413c5d1351f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/grafics/Tiny Swords/Terrain/Ground/Tilemap_Flat.png"
-dest_files=["res://.godot/imported/Tilemap_Flat.png-7f1208a6145a87aa0db75d964ac902c1.ctex"]
+source_file="res://addons/Grafics/Tiny Swords/Terrain/Ground/Tilemap_Flat.png"
+dest_files=["res://.godot/imported/Tilemap_Flat.png-19338f5eafb7c03a7417f413c5d1351f.ctex"]
 
 [params]
 

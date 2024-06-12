@@ -208,3 +208,4 @@ stream = ExtResource("5_q31y1")
 
 [node name="AudioHit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_7wpay")
+max_polyphony = 2

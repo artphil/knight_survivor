@@ -13,27 +13,35 @@ ASSETS
 
 Grafics
 
-Tiny Swords
-Pixel Frog
+Tiny Swords by Pixel Frog | https://pixelfrog-assets.itch.io
 These assets are released under a Creative Commons Zero (CC0) license. You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. 
 https://pixelfrog-assets.itch.io/tiny-swords
 
-Particle Pack
-Kenney
+Particle Pack by Kenney | https://kenney.nl
 These assets are released under a Creative Commons Zero (CC0) license. You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. 
 https://kenney.nl/assets/particle-pack
 
 Sounds
 
-Swosh Sword Swing
-qubodup
+Swosh Sword Swing by qubodup | https://freesound.org/people/qubodup
 These assets are released under a Creative Commons Zero (CC0) license. You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. 
 https://freesound.org/people/qubodup/sounds/59992/
 
-Zombie Hit
-MisterKidX
+Zombie Hit by MisterKidX
 These assets are released under a Creative Commons Attribution 4.0 license. You are free to share (to copy, distribute and transmit) and to remix (to adapt and modify) as long as you credit the author of the sound. 
 https://freesound.org/people/MisterKidX/sounds/454831/
+
+Adventure by Alexander Nakarada (CreatorChords) | https://creatorchords.com
+Music promoted by https://www.free-stock-music.com
+Creative Commons / Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+https://www.free-stock-music.com/alexander-nakarada-adventure.html
+
+Superepic by Alexander Nakarada (CreatorChords) | https://creatorchords.com
+Music promoted by https://www.free-stock-music.com
+Creative Commons / Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+https://www.free-stock-music.com/alexander-nakarada-superepic.html
 
 Fonts
 

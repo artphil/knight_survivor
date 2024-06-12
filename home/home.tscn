@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cdv42aokdudcl"]
+[gd_scene load_steps=20 format=3 uid="uid://cdv42aokdudcl"]
 
 [ext_resource type="Script" path="res://home/home.gd" id="1_uca7i"]
 [ext_resource type="PackedScene" uid="uid://cprdr5pd2q307" path="res://ui/credits_ui.tscn" id="2_3hr7k"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dthcsfxilkj4w" path="res://addons/grafics/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="5_oty27"]
 [ext_resource type="FontFile" uid="uid://v6pg643d8b6t" path="res://addons/fonts/Deutsch-Gothic/Deutsch.ttf" id="6_co3sf"]
 [ext_resource type="Texture2D" uid="uid://jpktjsw0a5xx" path="res://addons/grafics/Tiny Swords/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="7_ywlbf"]
+[ext_resource type="AudioStream" uid="uid://biutpr2kvve8m" path="res://addons/sounds/alexander-nakarada-adventure.mp3" id="8_64wgk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ux7b8"]
 texture = ExtResource("3_nkr4y")
@@ -182,6 +183,10 @@ grow_vertical = 0
 size_flags_vertical = 8
 text = "A / Left = LEFT | W / Up = UP | S / Down = DOWN |  D / Right = RIGHT | Space / MouseLeft = ATTACK"
 horizontal_alignment = 1
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_64wgk")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/Buttons/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Buttons/MarginContainer/VBoxContainer/CreditButton" to="." method="_on_credit_button_pressed"]

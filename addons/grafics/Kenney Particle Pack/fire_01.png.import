@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cle75jrkk3tm7"
-path="res://.godot/imported/fire_01.png-b92fa0ceeab3d8d09cd69c11c6b905cd.ctex"
+path="res://.godot/imported/fire_01.png-23f82e4c2775f308ad5f91c340848269.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/grafics/Kenney Particle Pack/fire_01.png"
-dest_files=["res://.godot/imported/fire_01.png-b92fa0ceeab3d8d09cd69c11c6b905cd.ctex"]
+source_file="res://addons/Grafics/Kenney Particle Pack/fire_01.png"
+dest_files=["res://.godot/imported/fire_01.png-23f82e4c2775f308ad5f91c340848269.ctex"]
 
 [params]
 

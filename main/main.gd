@@ -9,6 +9,7 @@ var last_scene = HOME
 var render_scene
 
 func _ready():
+  randomize()
   GameManager.main = self
   change_scene(HOME)
 
